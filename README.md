@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# iNoteBook App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web application is created using **React.js** with
+**Tailwind CSS**. The database is **MongoDB** for storing the
+user data and the notes added by particular user.
 
-## Available Scripts
+You can add your note with **_title_**, **_description_** and
+**_tag (optional)_**. You can also edit the note,
+delete the note whenever you need.
 
-In the project directory, you can run:
+## Project Setup
 
-### `npm start`
+### Backend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+npm init
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- NPM stands for **Node Package Manager**. It is the world's largest code library that contains over 800,000 code packages which can be installed through the command line.
+- NPM is itself is installed through Node.js. So to have npm in the command line, you must have **[Node.js](https://nodejs.org/en/)** installed.
+- The command **_init_** is short for **initialize**. Before creating a new project, we need to specify some of the project's attributes. These attributes includes the project's name, project's description and project's version. There are various attributes but the name and version are the most important here.
 
-### `npm test`
+```
+npm install express cors mongoose jsonwebtoken express-validator bcryptjs
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install the above mentioned dependencies.
 
-### `npm run build`
+- **Express**: [Express.js](https://expressjs.com/) is a free and open-source web application framework for Node. js. It is used for designing and building web applications quickly and easily.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **cors**: [CORS](https://expressjs.com/en/resources/middleware/cors.html) is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **mongoose**: [Mongoose](https://mongoosejs.com/) is an Object Data Modeling (ODM) library for **MongoDB** and **Node.js**. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB. MongoDB is a schema-less NoSQL document database.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **jsonwebtoken**: [JWT](https://jwt.io/introduction), or JSON Web Token, is an open standard used to share security information between two parties — a client and a server.
 
-### `npm run eject`
+- **express-validator**: [express-validator](https://express-validator.github.io/docs/) is a set of express. js middlewares that wraps validator. js validator and sanitizer functions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **bcryptjs**: The [bcrypt NPM package](https://www.npmjs.com/package/bcryptjs) is a JavaScript implementation of the bcrypt password hashing function that allows you to easily create a hash out of a password string.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install -D nodemon
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **nodemon**: nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- -D is shorthand for devDependencies. Dev dependencies are modules which are only required during development whereas dependencies are required at runtime.
 
-## Learn More
+### Database (MongoDB)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [MongoDB](https://www.mongodb.com/what-is-mongodb) is an open source NoSQL database management program. NoSQL databases are quite useful for working with large sets of distributed data. MongoDB is a tool that can manage document-oriented information, store or retrieve information.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Frontend
 
-### Code Splitting
+#### React.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+npx create-react-app iNoteBook
+```
 
-### Analyzing the Bundle Size
+- **NPX**: The npx stands for Node Package Execute and it comes with the npm.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- This command will create a react app by the iNoteBook.
 
-### Making a Progressive Web App
+#### Tailwind CSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
 
-### Advanced Configuration
+- Install **Tailwind CSS** and its peer dependencies and then run the **_init_** command to generate two files **tailwind.config.js** and **postcss.config.js**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Now add the path to the tailwind config file as shown below:
 
-### Deployment
+```
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Now create an **_tailwind.css_** file in the src(source) folder and add the **@tailwind** directive to the file for each of the Tailwind's layers.
 
-### `npm run build` fails to minify
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Note: In this project I have created a css folder inside of the assets folder which is inside the src folder.
+
+- The assets is where you would put your _images/stylesheets/videos_ etc. that you will import in the vue files.
+
+- Now after following the above steps, import the css file in the **index.js** file.
+
+```
+import "./assets/css/tailwind.css";
+```
+
+Installing few more packages for our frontend.
+
+```
+npm install react-router-dom concurrently
+```
+
+- **react-router-dom**: The react-router-dom package contains bindings for using React Router in web applications.
+
+- **concurrently**: Concurrently is an npm package that allows us to run multiple commands concurrently.
+
+#### Concurrently run the server
+
+```
+npm run both
+```
+
+- This command will run backend and frontend server concurrently.
