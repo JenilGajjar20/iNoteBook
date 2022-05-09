@@ -1,12 +1,8 @@
 # iNoteBook App
 
-This web application is created using **React.js** with
-**Tailwind CSS**. The database is **MongoDB** for storing the
-user data and the notes added by particular user.
+This web application is created using **React.js** with **Tailwind CSS**. The database is **MongoDB** for storing the user data and the notes added by particular user.
 
-You can add your note with **_title_**, **_description_** and
-**_tag (optional)_**. You can also edit the note,
-delete the note whenever you need.
+You can add your note with **_title_**, **_description_** and **_tag (optional)_**. You can also edit the note, delete the note whenever you need.
 
 ## Project Setup
 
@@ -17,7 +13,7 @@ npm init
 ```
 
 - NPM stands for **Node Package Manager**. It is the world's largest code library that contains over 800,000 code packages which can be installed through the command line.
-- NPM is itself is installed through Node.js. So to have npm in the command line, you must have **[Node.js](https://nodejs.org/en/)** installed.
+- NPM itself is installed through Node.js. So to have npm in the command line, you must have **[Node.js](https://nodejs.org/en/)** installed.
 - The command **_init_** is short for **initialize**. Before creating a new project, we need to specify some of the project's attributes. These attributes includes the project's name, project's description and project's version. There are various attributes but the name and version are the most important here.
 
 ```
@@ -26,7 +22,7 @@ npm install express cors mongoose jsonwebtoken express-validator bcryptjs
 
 Install the above mentioned dependencies.
 
-- **Express**: [Express.js](https://expressjs.com/) is a free and open-source web application framework for Node. js. It is used for designing and building web applications quickly and easily.
+- **Express**: [Express.js](https://expressjs.com/) is a free and open-source web application framework for Node.js. It is used for designing and building web applications quickly and easily.
 
 - **cors**: [CORS](https://expressjs.com/en/resources/middleware/cors.html) is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
 
@@ -34,7 +30,7 @@ Install the above mentioned dependencies.
 
 - **jsonwebtoken**: [JWT](https://jwt.io/introduction), or JSON Web Token, is an open standard used to share security information between two parties — a client and a server.
 
-- **express-validator**: [express-validator](https://express-validator.github.io/docs/) is a set of express. js middlewares that wraps validator. js validator and sanitizer functions.
+- **express-validator**: [express-validator](https://express-validator.github.io/docs/) is a set of express.js middlewares that wraps validator.js validator and sanitizer functions.
 
 - **bcryptjs**: The [bcrypt NPM package](https://www.npmjs.com/package/bcryptjs) is a JavaScript implementation of the bcrypt password hashing function that allows you to easily create a hash out of a password string.
 
@@ -60,7 +56,7 @@ npx create-react-app iNoteBook
 
 - **NPX**: The npx stands for Node Package Execute and it comes with the npm.
 
-- This command will create a react app by the iNoteBook.
+- This command will create a react app by the name iNoteBook.
 
 #### Tailwind CSS
 
