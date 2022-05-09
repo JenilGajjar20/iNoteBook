@@ -89,7 +89,7 @@ module.exports = {
 
 > Note: In this project I have created a css folder inside of the assets folder which is inside the src folder.
 
-- The assets is where you would put your _images/stylesheets/videos_ etc. that you will import in the vue files.
+- The assets is where you would put your _images/stylesheets/videos_ etc. that you will import in the react files.
 
 - Now after following the above steps, import the css file in the **index.js** file.
 
